@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "eqeqeq": 1,
+    "spaced-line-comment": 1,
+    "space-unary-word-ops": 1,
+    "space-return-throw-case": 1,
+    "space-before-keywords": 1,
+    "space-before-function-parentheses": 1,
+    "no-space-before-semi": 1,
+    "no-spaced-func": 1,
+    "no-var": 1,
+    "no-duplicate-imports": 1
+  }
+}
