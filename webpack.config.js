@@ -5,7 +5,7 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/app.jsx',
+        app: './src/app.js',
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -23,7 +23,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                loader: "babel-loader"
+                loader: ["babel-loader","eslint-loader"]
             },
             {
                 test: /\.css$/,
