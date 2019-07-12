@@ -11,7 +11,8 @@ module.exports = {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: true,
+        // historyApiFallback: true,
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
@@ -22,6 +23,7 @@ module.exports = {
         })
     ],
     output: {
+        publicPath: '/',
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
@@ -35,14 +37,6 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
             }
         ]
     }
