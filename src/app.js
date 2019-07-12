@@ -1,6 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Entry from './Entry.js';
+import './styles.scss';
 
 
-ReactDOM.render(<Entry/>, document.getElementById("root"));
+function App () {
+    return (
+        <div>
+            Hello App!
+        </div>
+    )
+}
+
+ReactDOM.render(<App/>, document.getElementById("root"));

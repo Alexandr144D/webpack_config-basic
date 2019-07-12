@@ -5,8 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --open --hot --fix",
-    "build": "webpack --mode production --fix"
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -25,11 +26,15 @@
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.2",
+    "express": "^4.17.1",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5",
+    "webpack-dev-middleware": "^3.7.0",
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
