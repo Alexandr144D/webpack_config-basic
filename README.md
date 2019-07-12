@@ -4,4 +4,4 @@ Here I compose basic setup files for the react project to start the project simp
 
 Babel
 Eslint
-... wiil add more configs
+... will add more configs
