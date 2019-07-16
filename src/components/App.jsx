@@ -1,32 +1,30 @@
 import React from "react";
-import {Route} from "react-router-dom";
-import {router} from './router';
+import {Route} from "react-router";
+import {routes} from './routes/appRoutes';
+import {withRouter} from "react-router";
 
-import Users from './Routing/Users.jsx';
-import About from './Routing/About.jsx';
-import Index from './Routing/Index.jsx';
-import Withrouter from './Routing/Withrouter.jsx';
+// COMPONENTS
+import {LoginComponent} from './containers/login/LoginComponent.jsx';
+import {ProfileComponent} from './containers/profile/ProfileComponent.jsx';
+import {StartPageComponent} from './containers/startPage/StartPageComponent.jsx';
 
 
-class App extends React.Component {
-    render () {
-        return (
-            <React.Fragment>
-                <header>
-                    <h1>HEADER</h1>
-                </header>
-                <div>
-                    <Route exact path={router.index} component={Index}/>
-                    <Route path={router.about} component={About}/>
-                    <Route path={router.users} component={Users}/>
-                    <Route path={router.withrouter} component={Withrouter}/>
-                </div>
-                <footer>
-                    <h1>FOOTER</h1>
-                </footer>
-            </React.Fragment>
-        )
-    }
+function App () {
+    return (
+        <React.Fragment>
+            <header>
+                <header>HEADER</header>
+            </header>
+            <main>
+                <Route exact path={routes.main} component={StartPageComponent}/>
+                <Route path={routes.login} component={LoginComponent}/>
+                <Route path={routes.profile} component={ProfileComponent}/>
+            </main>
+            <footer>
+                <footer>FOOTER</footer>
+            </footer>
+        </React.Fragment>
+    )
 }
 
-export default App;
+export default withRouter(App);

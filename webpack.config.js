@@ -6,7 +6,7 @@ const webpack = require('webpack');
 module.exports = {
     mode: 'development',
     entry: {
-        app: './src/index.jsx',
+        app: './src/components/index.jsx',
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -18,7 +18,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: "./src/index.html",
+            template: "./src/components/index.html",
             filename: "./index.html"
         })
     ],
