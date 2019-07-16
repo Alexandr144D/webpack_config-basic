@@ -1,14 +1,16 @@
 import React from 'react';
+import thunk from 'redux-thunk';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from "react-router-dom";
-import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import reducer from './reducer/index';
-import thunk from 'redux-thunk';
 import App from './components/App.jsx';
+import {BrowserRouter} from "react-router-dom";
+import {createStore, applyMiddleware} from 'redux';
+import { composeWithDevTools } from "redux-devtools-extension"
 
 
-const store = createStore(reducer, applyMiddleware(thunk));
+
+const store = createStore(reducer, composeWithDevTools(applyMiddleware(thunk)));
 
 
 ReactDOM.render(
